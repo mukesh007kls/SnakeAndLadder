@@ -21,11 +21,10 @@ public class Main {
                     break;
                 case SNAKE:
                     startPosition -= rollingDice;
+                    if(startPosition<0){
+                        startPosition=0;
+                    }
                     break;
-            }
-
-            if(startPosition<0){
-                startPosition=0;
             }
 
             if(startPosition==WIN_POSITION){
