@@ -37,9 +37,10 @@ public class Main {
         /* rollingRotation -- decides which player needs to throw the dice.
         Can use rollingRotaton with an integer value to set 1-to continue set 0-to give chance tonext player
          int rollingRotation=1 or by taking boolean vale boolean rollingRotation=true*/
-        int rollingRotation = 1;
+        //int rollingRotation = 1;
+        boolean rollingRotation=true;
 
-        while (rollingRotation==1) {
+        while (rollingRotation) {
             int rollingDice = (int) (Math.random() * 10) % 6 + 1;
             notdr++;
             //Snake or ladder option--sol
@@ -54,11 +55,11 @@ public class Main {
                     break;
                 case SNAKE:
                     startPosition -= rollingDice;
-                    rollingRotation=0;
+                    rollingRotation=false;
                     break;
                 //Default gets implemented when the player doesnt get reach where there isn't any snake or ladder
                 default:
-                    rollingRotation=0;
+                    rollingRotation=false;
                     break;
             }
 
