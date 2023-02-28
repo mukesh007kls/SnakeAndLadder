@@ -57,7 +57,7 @@ public class Main {
                     startPosition -= rollingDice;
                     rollingRotation=false;
                     break;
-                //Default gets implemented when the player doesnt get reach where there isn't any snake or ladder
+                //Default gets implemented when the player doesn't get reach where there isn't any snake or ladder
                 default:
                     rollingRotation=false;
                     break;
